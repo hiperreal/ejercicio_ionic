@@ -1,0 +1,7 @@
+{
+  "name": "MIprimeraApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
