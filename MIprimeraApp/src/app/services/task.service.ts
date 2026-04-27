@@ -19,7 +19,7 @@ export class TaskService{
         this.tasks =value ? JSON.parse(value) : [];
     }
     /* Devuelve la lista de tareas */
-    getTaks(): Task[] {
+    getTasks(): Task[] {
         return [...this.tasks];
     }
 

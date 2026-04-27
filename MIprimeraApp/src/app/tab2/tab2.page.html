@@ -17,17 +17,32 @@
     </ion-textarea>
   </ion-item>
   <ion-item>
-    <ion-input type="date" label="fecha limite" labelPlacement="stacked"
-      [(ngModel)]="form.fechalimite">
+    <ion-input type="date" label="fecha limite" labelPlacement="stacked" [(ngModel)]="form.fechalimite">
     </ion-input>
   </ion-item>
+
+  <ion-item>
+    <ion-select label="Estado" labelPlacement="stacked" [(ngModel)]="form.estado">
+      <ion-select-option value="pendiente">pendiente</ion-select-option>
+      <ion-select-option value="en progreso">En progreso</ion-select-option>
+      <ion-select-option value="listo">listo</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-select label="prioridad" labelPlacement="stacked" [(ngModel)]="form.prioridad">
+      <ion-select-option value="baja">Baja</ion-select-option>
+      <ion-select-option value="media">Media</ion-select-option>
+      <ion-select-option value="alta">Alta</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
   <ion-item>
     <ion-input label="Categoria" labelPlacement="stacked" [(ngModel)]="form.categoria"
       placeholder="Ejemplo: Estudio, Trabajo, Personal"></ion-input>
   </ion-item>
   <ion-button expand="block" class="ion-margin-top" (click)="guardar()">Guardar tarea</ion-button>
-  <ion-toast [isOpen]="mostrarToast" [message]="mensajeToast" duration="2000"
-    (didDismiss)="mostrarToast = false">
-   </ion-toast>
+  <ion-toast [isOpen]="mostrarToast" [message]="mensajeToast" duration="2000" (didDismiss)="mostrarToast = false">
+  </ion-toast>
 
 </ion-content>
