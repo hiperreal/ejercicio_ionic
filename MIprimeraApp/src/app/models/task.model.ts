@@ -1,14 +1,14 @@
-export type Taskstatus = 'pendiente' | 'en-progreso' | 'Listo';
+export type Taskstatus = 'pendiente' | 'en progreso' | 'listo';
 export type Taskpriority = 'baja' | 'media' | 'alta'| 'urgente';
 
 export interface Task {
     id: string;
     titulo: string;
     descripcion: string;
-    fechaCreacion: Date;
-    fechaLimite: Date;
+    fechaCreacion: string;
+    fechalimite: string;
     estado: Taskstatus;
     prioridad: Taskpriority;
     categoria: string;
-    completada: boolean;
+    completado: boolean;
 }
